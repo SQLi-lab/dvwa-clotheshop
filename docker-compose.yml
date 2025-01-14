@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+
+  # Backend (привязка через uuid)
+  backend:
+    build:
+      context: pharmacy-back
+      dockerfile: Dockerfile.backend
+    container_name: "f90a628e-bb2c-11ef-b49d-00155ddbd2f5-back"
+    restart: always
+    networks:
+      - sqli_lab
+    environment:
+      REACT_APP_BACKEND_URL: /away/f90a628e-bb2c-11ef-b49d-00155ddbd2f5/api
+      REACT_APP_PREFIX: /away/f90a628e-bb2c-11ef-b49d-00155ddbd2f5
+      PUBLIC_URL: /away/f90a628e-bb2c-11ef-b49d-00155ddbd2f5
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.f90a628e-bb2c-11ef-b49d-00155ddbd2f5-back.rule=PathPrefix(`/away/f90a628e-bb2c-11ef-b49d-00155ddbd2f5/api`)"
+      - "traefik.http.services.f90a628e-bb2c-11ef-b49d-00155ddbd2f5-back.loadbalancer.server.port=5000"
+
+  # Frontend (привязка через uuid)
+  frontend:
+    build:
+      context: pharmacy-app
+      dockerfile: Dockerfile.frontend
+    container_name: "f90a628e-bb2c-11ef-b49d-00155ddbd2f5-front"
+    restart: always
+    networks:
+      - sqli_lab
+    environment:
+      REACT_APP_BACKEND_URL: /away/f90a628e-bb2c-11ef-b49d-00155ddbd2f5/api
+      REACT_APP_PREFIX: /away/f90a628e-bb2c-11ef-b49d-00155ddbd2f5
+      PUBLIC_URL: /away/f90a628e-bb2c-11ef-b49d-00155ddbd2f5
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.f90a628e-bb2c-11ef-b49d-00155ddbd2f5-front.rule=PathPrefix(`/away/f90a628e-bb2c-11ef-b49d-00155ddbd2f5`)"
+      - "traefik.http.services.f90a628e-bb2c-11ef-b49d-00155ddbd2f5-front.loadbalancer.server.port=3000"
+
+
+
+networks:
+  sqli_lab:
+    external: true
