@@ -5,107 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8929cbe-dec3-480d-b0d8-bc053344cfa7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/dvwa-clotheshop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/.idea/clothesshop-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/Dockerfile.frontend" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/Cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/Constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/FilterPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/HomePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/LoginPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/ProductCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/ProductDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/ProfilePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/imagesLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/profile_pictures/profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-01-23_3039.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-01-45_3826.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-02-05_8903.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-02-24_7727.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-02-43_8028.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-03-03_9596.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-03-23_5533.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-03-42_2180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-04-07_5203.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-04-37_5097.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-05-01_7884.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-05-23_7454.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-05-46_1154.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-06-08_7302.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-06-32_7109.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-07-00_1364.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-07-21_3611.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-07-42_9060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-10-10_6154.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-10-30_2194.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-10-51_2878.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-11-12_2789.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-11-33_5293.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-11-54_5427.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-12-16_5673.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-12-37_1433.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-12-57_5099.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-13-17_3855.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-13-38_1630.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-13-59_6400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-14-23_6325.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-14-44_9845.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_06-15-06_3307.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-29-41_4448.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-29-59_5127.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-30-17_7714.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-30-38_5308.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-31-03_1456.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-31-23_3522.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-31-44_5478.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-32-04_2066.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-32-24_1549.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-32-44_5583.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-33-05_9663.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-33-26_3653.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-33-47_9083.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-34-09_7100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-34-30_6669.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-34-52_5087.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/images/2025-01-14_15-35-14_4735.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../clothesshop-app/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile.backend" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clothesshop.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/createdb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/filldb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersreviews.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/output_data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/output_database_structure.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simpledb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clothesshop-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../clothesshop-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clothesshop-app/src/components/ProductDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/ProductDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clothesshop-app/src/components/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/ProfilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clothesshop-app/src/components/profile_pictures/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/../clothesshop-app/src/components/profile_pictures/profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothesshop.db" beforeDir="false" afterPath="$PROJECT_DIR$/clothesshop.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +205,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1736824422796</updated>
-      <workItem from="1736824423838" duration="3896000" />
+      <workItem from="1736824423838" duration="9602000" />
     </task>
     <servers />
   </component>
@@ -320,6 +227,6 @@
     <SUITE FILE_PATH="coverage/clothesshop_back$simpledb.coverage" NAME="simpledb Coverage Results" MODIFIED="1736858653472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/clothesshop_back$filldb.coverage" NAME="filldb Coverage Results" MODIFIED="1736858790758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/clothesshop_back$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1736862695028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/clothesshop_back$app_py.coverage" NAME="app.py Coverage Results" MODIFIED="1736862832122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/clothesshop_back$app_py.coverage" NAME="app.py Coverage Results" MODIFIED="1736873021786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

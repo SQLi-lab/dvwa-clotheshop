@@ -52,7 +52,7 @@ function ProductDetail({ addToCart }) {
         }
     }, [navigate]);
 
-    // Загрузка данных о продукте
+// Загрузка данных о продукте
     useEffect(() => {
         async function fetchProductDetails() {
             try {
@@ -90,7 +90,7 @@ function ProductDetail({ addToCart }) {
         fetchUserName();
     }, [product_id]);
 
-    // Проверка избранного
+// Проверка, является ли товар избранным
     useEffect(() => {
         async function checkFavoriteStatus() {
             if (!product || !product.article) return;
@@ -119,6 +119,39 @@ function ProductDetail({ addToCart }) {
 
         checkFavoriteStatus();
     }, [product]);
+
+
+    // Проверка избранного
+    // useEffect(() => {
+    //     async function checkFavoriteStatus() {
+    //         if (!product || !product.article) return;
+    //
+    //         const userCookie = getCookieByName('user');
+    //         if (!userCookie) {
+    //             console.error("Пользователь не авторизован!");
+    //             return;
+    //         }
+    //
+    //         try {
+    //             const response = await fetch(`${BACKEND_URL}/favorites/check`, {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-Type': 'application/json',
+    //                     'Authorization': 'Bearer ' + userCookie,
+    //                 },
+    //                 body: JSON.stringify({ article: product.article }),
+    //             });
+    //             const data = await response.json();
+    //             setIsFavorite(data.isFavorite || false);
+    //         } catch (error) {
+    //             console.error('Ошибка проверки избранного:', error);
+    //         }
+    //     }
+    //
+    //     checkFavoriteStatus();
+    // }, [product]);
+
+
 
     // Управление избранным
     const handleFavoriteToggle = async () => {

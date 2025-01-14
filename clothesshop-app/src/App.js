@@ -106,7 +106,6 @@ function App() {
                 return response.json();
             })
             .then(() => {
-                setOrders((prevOrders) => [...prevOrders, ...cart]);
                 setCart([]);
                 alert('Заказы успешно оформлены!');
             })
@@ -115,6 +114,26 @@ function App() {
                 alert('Ошибка при оформлении заказа.');
             });
     };
+
+
+    useEffect(() => {
+        const userCookie = getCookieByName('user');
+
+        fetch(`${BACKEND_URL}/orders`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + userCookie,
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                setOrders(data); // Устанавливаем заказы из API
+            })
+            .catch((error) => {
+                console.error('Ошибка получения заказов:', error);
+            });
+    }, []);
 
     return (
         <>

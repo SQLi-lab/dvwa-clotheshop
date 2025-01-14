@@ -84,22 +84,35 @@ function ProfilePage() {
 
 
     useEffect(() => {
-        const userCookie = getCookieByName('user');
+        async function fetchOrders() {
+            const userCookie = getCookieByName('user');
 
-        fetch(`${BACKEND_URL}/orders`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + userCookie,
-            },
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                setOrders(data); // Устанавливаем заказы из API
-            })
-            .catch((error) => {
-                console.error('Ошибка получения заказов:', error);
-            });
+            if (!userCookie) {
+                console.error('Пользователь не авторизован');
+                setOrders([]);
+                return;
+            }
+
+            try {
+                const response = await fetch(`${BACKEND_URL}/orders`, {
+                    headers: {
+                        Authorization: 'Bearer ' + userCookie,
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Ошибка загрузки заказов');
+                }
+
+                const data = await response.json();
+                setOrders(data);
+            } catch (error) {
+                console.error('Ошибка загрузки заказов:', error);
+                setOrders([]); // Установите пустой массив, если произошла ошибка
+            }
+        }
+
+        fetchOrders();
     }, []);
 
     useEffect(() => {
@@ -220,7 +233,6 @@ function ProfilePage() {
                         </Grid>
                         <Grid item xs={12} md={9}>
                             <Typography variant="h6">{userData.name}</Typography>
-                            <Typography>Паспорт: {userData.passport}</Typography>
                             <Typography>Дата рождения: {userData.birthDate}</Typography>
                             <Typography>Адрес: {userData.address}</Typography>
                             <Typography>Телефон: {userData.phone}</Typography>
@@ -228,26 +240,38 @@ function ProfilePage() {
                     </Grid>
                 </Paper>
 
-                {/* Любимые машины */}
+                {/* Избранное */}
                 <Paper elevation={2} style={{ padding: '20px', marginBottom: '20px' }}>
                     <Typography variant="h6" style={{ marginBottom: '10px' }}>
-                        Любимые машины:
+                        Избранное:
                     </Typography>
                     {favorites.length === 0 ? (
-                        <Typography>У вас нет любимых машин</Typography>
+                        <Typography>У вас нет избранных товаров</Typography>
                     ) : (
                         favorites.map((fav, index) => (
-                            <Typography key={index}>{fav.car_name}</Typography>
+                            <Paper
+                                key={index}
+                                elevation={1}
+                                style={{
+                                    padding: '10px',
+                                    marginBottom: '10px',
+                                    border: '1px solid #ccc',
+                                }}
+                            >
+                                <Typography style={{ fontWeight: 'bold' }}>Название:</Typography>
+                                <Typography>{fav.product_name || 'Не указано'}</Typography>
+                            </Paper>
                         ))
                     )}
                 </Paper>
+
 
                 {/* Блок "Ваши заказы" */}
                 <Paper elevation={2} style={{ padding: '20px', marginBottom: '20px' }}>
                     <Typography variant="h6" style={{ marginBottom: '10px' }}>
                         Ваши заказы:
                     </Typography>
-                    {paginatedOrders.length === 0 ? (
+                    {orders.length === 0 ? (
                         <Typography>У вас нет заказов</Typography>
                     ) : (
                         <>
@@ -255,22 +279,23 @@ function ProfilePage() {
                                 <Paper
                                     key={index}
                                     elevation={1}
-                                    style={{ padding: '10px', marginBottom: '10px', border: '1px solid #ccc' }}
+                                    style={{
+                                        padding: '10px',
+                                        marginBottom: '10px',
+                                        border: '1px solid #ccc',
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center',
+                                    }}
                                 >
-                                    <Grid container>
-                                        <Grid item xs={4}>
-                                            <Typography style={{ fontWeight: 'bold' }}>Автомобиль:</Typography>
-                                            <Typography>{order.model_name}</Typography>
-                                        </Grid>
-                                        <Grid item xs={4}>
-                                            <Typography style={{ fontWeight: 'bold' }}>Цена:</Typography>
-                                            <Typography>{order.price} руб.</Typography>
-                                        </Grid>
-                                        <Grid item xs={4}>
-                                            <Typography style={{ fontWeight: 'bold' }}>Статус:</Typography>
-                                            <Typography>{order.status}</Typography>
-                                        </Grid>
-                                    </Grid>
+                                    <Box>
+                                        <Typography style={{ fontWeight: 'bold' }}>Заказ от:</Typography>
+                                        <Typography>{new Date(order.order_date).toLocaleDateString()}</Typography>
+                                    </Box>
+                                    <Box>
+                                        <Typography style={{ fontWeight: 'bold' }}>Статус:</Typography>
+                                        <Typography>{order.status}</Typography>
+                                    </Box>
                                 </Paper>
                             ))}
                             {orders.length > itemsPerPage && (
@@ -285,6 +310,7 @@ function ProfilePage() {
                     )}
                 </Paper>
 
+
                 {/* Блок "Отзывы" */}
                 <Paper elevation={2} style={{ padding: '20px', marginBottom: '20px' }}>
                     <Typography variant="h6" style={{ marginBottom: '10px' }}>
@@ -297,19 +323,32 @@ function ProfilePage() {
                             <Paper
                                 key={index}
                                 elevation={1}
-                                style={{ padding: '10px', marginBottom: '10px', border: '1px solid #ccc' }}
+                                style={{
+                                    padding: '10px',
+                                    marginBottom: '10px',
+                                    border: '1px solid #ccc',
+                                }}
                             >
-                                <Typography style={{ fontWeight: 'bold' }}>Автомобиль:</Typography>
-                                <Typography>{review.car_name}</Typography>
-                                <Typography style={{ fontWeight: 'bold', marginTop: '5px' }}>Отзыв:</Typography>
-                                <Typography>{review.review_text}</Typography>
-                                <Typography style={{ fontSize: '0.8em', color: '#777', marginTop: '5px' }}>
-                                    Дата: {review.review_date}
+                                <Typography style={{ fontWeight: 'bold' }}>Товар:</Typography>
+                                <Typography>{review.product_name || 'Не указано'}</Typography>
+                                <Typography style={{ fontWeight: 'bold', marginTop: '5px' }}>
+                                    Отзыв:
+                                </Typography>
+                                <Typography>{review.review_text || 'Нет текста отзыва'}</Typography>
+                                <Typography
+                                    style={{
+                                        fontSize: '0.8em',
+                                        color: '#777',
+                                        marginTop: '5px',
+                                    }}
+                                >
+                                    Дата: {review.review_date || 'Не указана'}
                                 </Typography>
                             </Paper>
                         ))
                     )}
                 </Paper>
+
 
             </Paper>
 
