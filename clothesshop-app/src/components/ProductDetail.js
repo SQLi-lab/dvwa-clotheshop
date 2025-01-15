@@ -24,13 +24,15 @@ function getCookieByName(name) {
 
 // Функция для выбора изображения на основе артикула
 function getImageForProduct(article) {
+    const articleString = String(article); // Приведение к строке
     let hash = 0;
-    for (let i = 0; i < article.length; i++) {
-        hash = article.charCodeAt(i) + ((hash << 5) - hash);
+    for (let i = 0; i < articleString.length; i++) {
+        hash = articleString.charCodeAt(i) + ((hash << 5) - hash);
     }
-    const index = Math.abs(hash % images.length);
+    const index = Math.abs(hash % images.length); // Индекс в пределах массива `images`
     return images[index];
 }
+
 
 function ProductDetail({ addToCart }) {
     const { product_id } = useParams();
