@@ -81,7 +81,7 @@ def get_products():
             stock, 
             released
         FROM products
-        WHERE released = 1
+        WHERE released = true
     """
     if category:
         query += f" AND category = '{category}'"
