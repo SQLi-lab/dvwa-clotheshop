@@ -3,8 +3,8 @@ import psycopg2
 import os
 from psycopg2.extras import RealDictCursor
 
-#DATABASE_TYPE = 'postgres'  # Измените на 'postgres', если используете PostgreSQL
-DATABASE_TYPE = 'sqlite'
+DATABASE_TYPE = 'postgres'  # Измените на 'postgres', если используете PostgreSQL
+#DATABASE_TYPE = 'sqlite'
 db_name = str(os.getenv('POSTGRES_DB')).replace("-", "_")
 
 # DATABASE_CONFIG = {
