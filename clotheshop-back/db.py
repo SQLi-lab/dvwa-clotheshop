@@ -7,30 +7,30 @@ DATABASE_TYPE = 'postgres'  # Измените на 'postgres', если исп�
 #DATABASE_TYPE = 'sqlite'
 db_name = str(os.getenv('POSTGRES_DB')).replace("-", "_")
 
-# DATABASE_CONFIG = {
-#     'sqlite': {
-#         'database': 'pharmacy.db'
-#     },
-#     'postgres': {
-#         'dbname': db_name,
-#         'user': os.getenv('POSTGRES_USER'),
-#         'password': os.getenv('POSTGRES_PASS'),
-#         'host': os.getenv('POSTGRES_HOST'),
-#         'port': os.getenv('POSTGRES_PORT')
-#     }
-# }
 DATABASE_CONFIG = {
     'sqlite': {
-        'database': 'clothesshop.db'
+        'database': 'pharmacy.db'
     },
     'postgres': {
-        'dbname': 'pharmacy', # dbname едина, там ток табла другая
-        'user': 'postgres',
-        'password': 'postgres',
-        'host': 'localhost',
-        'port': 5432
+        'dbname': db_name,
+        'user': os.getenv('POSTGRES_USER'),
+        'password': os.getenv('POSTGRES_PASS'),
+        'host': os.getenv('POSTGRES_HOST'),
+        'port': os.getenv('POSTGRES_PORT')
     }
 }
+# DATABASE_CONFIG = {
+#     'sqlite': {
+#         'database': 'clothesshop.db'
+#     },
+#     'postgres': {
+#         'dbname': 'pharmacy', # dbname едина, там ток табла другая
+#         'user': 'postgres',
+#         'password': 'postgres',
+#         'host': 'localhost',
+#         'port': 5432
+#     }
+# }
 
 
 def get_connection():
